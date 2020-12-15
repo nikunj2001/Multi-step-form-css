@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <form id="Form1" action="">
+            <h3>CREATE ACCOUNT</h3>
+            <input type="text" name="" id="" placeholder="Email" required>
+            <input type="password" name="" id="" placeholder="Password" required>
+            <input type="password" name="" id="" placeholder="Confirm Password" required>
+
+            <div class="btn-box">
+                <button id="Next1" class="btn-box" type="button">Next</button>
+            </div>
+        </form>
+        <form id="Form2" action="">
+            <h3>SOCIAL LINKS</h3>
+            <input type="text" placeholder="Medium">
+            <input type="text" placeholder="Github">
+            <input type="text" placeholder="LinkedIn">
+
+            <div class="btn-box">
+                <button id="Back1" class="btn-box" type="button">Back</button>
+                <button id="Next2" class="btn-box" type="button">Next</button>
+            </div>
+        </form>
+        <form id="Form3" action="">
+            <h3>PERSONAL INFO</h3>
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+            <input type="text" placeholder="Mobile No." required>
+
+            <div class="btn-box">
+                <button class="btn-box" id="Back2" type="button">Back</button>
+                <button class="btn-box" type="submit">Submit</button>
+            </div>
+        </form>
+        <div class="step-row">
+            <div id="progress">
+                <div id="try">
+                <div class="step-col"><small>Step1</small></div>
+                <div class="step-col"><small>Step2</small></div>
+                <div class="step-col"><small>Step3</small></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var form1 = document.getElementById("Form1");
+        var form2 = document.getElementById("Form2");
+        var form3 = document.getElementById("Form3");
+        var Next1 = document.getElementById("Next1");
+        var Next2 = document.getElementById("Next2");
+        var Back1 = document.getElementById("Back1");
+        var Back2 = document.getElementById("Back2");
+        var progress = document.getElementById("progress");
+
+        Next1.onclick = function () {
+            form1.style.left = "-450px";
+            form2.style.left = "40px";
+            progress.style.width = "240px"
+        }
+        Back1.onclick = function () {
+            form1.style.left = "40px";
+            form2.style.left = "450px";
+            progress.style.width = "120px"
+
+        }
+        Next2.onclick = function () {
+            form2.style.left = "-450px";
+            form3.style.left = "40px";
+            progress.style.width = "360px"
+
+        }
+        Back2.onclick = function () {
+            form2.style.left = "40px";
+            form3.style.left = "450px";
+            progress.style.width = "240px"
+
+        }
+    </script>
+</body>
+
+</html>
